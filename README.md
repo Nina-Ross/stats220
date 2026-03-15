@@ -17,5 +17,4 @@
 
 A meme that captures how I currently feel about my university studies is:
 
-[![]([https://cdn-useast1.kapwing.com/static/templates/crying-cat-meme-template-thumbnail-4e806a85.webp)](https://www.kapwing.com/explore/crying-cat-meme-template](https://www.google.com/search?q=animated+gif+of+cat+crying&oq=animated+gif+of+cat+crying&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yDQgCEAAYhgMYgAQYigUyDQgDEAAYhgMYgAQYigUyCggEEAAYgAQYogQyCggFEAAYgAQYogTSAQg0NjI4ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#sv=CAMSZxowKg5heGcwM3hWcjBPYWJTTTIOYXhnMDN4VnIwT2FiU006DkhYNFVwZVZtZTJ1VzFNIAQqLwobX2pRQzJhYi1OSGMtZnNlTVA5ODJGLUFZXzk1Eg5heGcwM3hWcjBPYWJTTRgAMAEYByDshui7CTACSggQAhgCIAIoAg)) 
-
+![Crying cat](Crying_cat.gif)
