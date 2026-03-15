@@ -1,5 +1,5 @@
-<h1>**Stats220**</h1>h1>
-<h2>**A little about me:**</h2>
+<h1>Stats220</h1>
+<h2>A little about me:</h2>
 
 - I am undertaking a degree in biological sciences
 - I am taking STATS 220 because I want to learn more about data technologies to better myself as a scientist!
