@@ -2,9 +2,9 @@
 <h2>A little about me:</h2>
 
 <ul>
-I am undertaking a degree in biological sciences
-I am taking STATS 220 because I want to learn more about data technologies to better myself as a scientist!
-I am interested in learning all about animals, their behaviours and adaptations that make them best suited for their specific habitats :)
+<li>I am undertaking a degree in biological sciences</li>
+<li>I am taking STATS 220 because I want to learn more about data technologies to better myself as a scientist!</li>
+<li>I am interested in learning all about animals, their behaviours and adaptations that make them best suited for their specific habitats :)</li>
 </ul>
 
 **Some of my favourite animals**
