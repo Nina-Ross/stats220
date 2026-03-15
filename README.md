@@ -15,6 +15,7 @@
 <li><i>Felis catus</i> Finally... CATS I have two cats that I love very much :)</li>
 </ol>
 
-A meme that captures how I currently feel about my university studies is
-<ul> [![](https://cdn-useast1.kapwing.com/static/templates/crying-cat-meme-template-thumbnail-4e806a85.webp)](https://www.kapwing.com/explore/crying-cat-meme-template) </ul>
+A meme that captures how I currently feel about my university studies is:
+
+[![](https://cdn-useast1.kapwing.com/static/templates/crying-cat-meme-template-thumbnail-4e806a85.webp)](https://www.kapwing.com/explore/crying-cat-meme-template) 
 
