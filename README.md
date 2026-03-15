@@ -10,7 +10,7 @@
 
 **Some of my favourite animals**
 <ol>
-<li><i>Giraffa camelopardalis</i></li>
+<li><i>Giraffa camelopardalis</i> I love Giraffes! I think they're such funky animals</li>
   
 </ol>
 
