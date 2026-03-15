@@ -17,4 +17,4 @@
 
 A meme that captures how I currently feel about my university studies is:
 
-![Crying cat](Crying cat.gif)
+![Crying cat](Crying-cat.gif)
