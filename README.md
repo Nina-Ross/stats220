@@ -11,7 +11,8 @@
 **Some of my favourite animals**
 <ol>
 <li><i>Giraffa camelopardalis</i> I love Giraffes! I think they're such funky animals</li>
-<li><i>Enhydra lutris</i> Sea otters are so cute! Did you know they have a favourite rock they keep to break open food</li>
+<li><i>Enhydra lutris</i> Sea otters are so cute! Did you know they have a favourite rock they keep to break open food, you can read more about it here <a href="https://www.zmescience.com/ecology/animals-ecology/sea-otters-favorite-rock/">Sea otters</a> </li>
+<li><i>Felis catus</i> Finally... CATS I have two cats that I love very much :)</li>
 </ol>
 
 A meme that captures how I currently feel about my university studies is
