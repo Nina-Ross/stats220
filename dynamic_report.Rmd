@@ -1,0 +1,129 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+
+```
+
+```{css}
+body {
+  background-color: #D8BFD8;  /* pale purple background */
+  font-family: "Times New Roman", Times, serif;  /* set font */
+  color: black;  /* default text color */
+  margin: 20px;  /* optional spacing around the page */
+}
+
+h1, h2, h3, h4 {
+  color: #4B0082;  /* darker purple for headings */
+}
+
+p {
+  font-size: 16px;  /* make paragraph text slightly larger */
+}
+```
+
+```{r}
+library(tidyverse)
+
+# Loading the data in
+logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTyMuuJGdgPQKIn5Yu0SEmC_p6-Cb6GlP4981E_vJBrG4UJdoLjYsaYZUKI0T8vKZlLIgkgYB05Nd6p/pub?gid=495879699&single=true&output=csv")
+
+# Renaming the data
+latest_data <- logged_data %>%
+  rename(num_uni = `How many hours did you spend at university today? (round to nearest whole number)`,
+         num_pickups = `How many times did you pick up the phone during the day today? (See All App & Website Activity > Scroll down to Pick-Ups)`,
+    num_assign = `How many assignments did you have due today?(including quizzes, labs, assessments)`,
+    screen_time = `What screen time range were you in today?`,
+    productive = `How productive did you feel today`) 
+
+```
+
+# Analysis of Productivity and Assignments
+
+In this report, we analyze the relationship between productivity levels and  phone pickups in university students as well as the number of assignments they had due each day. 
+
+We summarize the data using mean, minimum, and maximum values, and visualised the trends using bar plots.
+
+```{r}
+# ================================
+# FINAL CODE FOR REPORT
+# ================================
+
+# Summary values for phone pickups
+mean_pickups <- mean(latest_data$num_pickups, na.rm = TRUE)
+min_pickups  <- min(latest_data$num_pickups, na.rm = TRUE)
+max_pickups  <- max(latest_data$num_pickups, na.rm = TRUE)
+mean_assign <- mean(latest_data$num_assign, na.rm = TRUE)
+min_assign <- min(latest_data$num_assign, na.rm = TRUE)
+max_assign <- max(latest_data$num_assign, na.rm = TRUE)
+
+```
+
+## Summary Statistics
+
+I first calculate summary statistics to understand the general trends in the data. 
+
+- Phone Pickups: average, minimum, and maximum number of times an individual picked up their phone.  
+- Assignments: average, minimum, and maximum number of assignments that were due each day.
+
+```{r}
+
+# Dynamic comment for report
+cat(paste0("The average number of phone pickups was ", round(mean_pickups, 1), ", with a minimum of ", min_pickups, " and a maximum of ", max_pickups, ".\n\n"))
+
+# Dynamic comment about assignments for report
+cat(paste0("The average number of assignments due was ", round(mean_assign, 1), ", with a minimum of ", min_assign, " and a maximum of ", max_assign, ".\n"))
+
+```
+
+## Phone Pickups vs Productivity Level
+
+The following plot shows the average number of times a student picked up their phone during the day compared to how productive they felt each day.
+
+```{r}
+# Bar plot 1: Pickups vs Productivity 
+latest_data %>%
+  ggplot() +
+  geom_bar(aes(x = productive, y = num_pickups),
+           stat = "summary",
+           fun = "mean",
+           fill = "thistle") +
+  labs(title = "The number of phone pick ups compared to productivity level",
+       x = "Productivity level",
+       y = "Number of pick ups") +
+  scale_x_discrete(labels = function(x) str_replace_all(x, " ", "\n"))
+
+```
+
+## Assignments vs Productivity Level
+
+This plot shows the average number of assignments completed by employees across productivity levels. 
+
+```{r}
+# Bar plot 2: Productivity vs Assignments
+latest_data %>%
+  ggplot() +
+  geom_bar(aes(x = productive,
+               y = num_assign),
+           stat = "summary",
+           fun = "mean",
+           fill = "thistle") +
+  labs(title = "Average number of assignments compared to productivity level",
+       x = "Productivity level",
+       y = "Number of assignments") +
+  scale_x_discrete(labels = function(x) str_replace_all(x, " ", "\n"))
+
+```
+
+## Data Interpretation
+
+The data shows some interesting patterns in both assignments and phone pickups across different productivity levels:
+
+Assignments:  
+Students who reported feeling very productive tended to have fewer assignments due each day, suggesting they may be completing tasks on time or even ahead of schedule. Those who felt somewhat unproductive or neutral generally had more assignments due, indicating a heavier workload or possible delays in completing tasks. Students who felt somewhat productive had a moderate number of assignments due, which could reflect a balanced approach to managing their work while feeling productive.
+
+Phone Pickups: 
+Students who felt very unproductive had the fewest phone pickups, which was unexpected. Those who felt somewhat productive, very productive, or neutral had roughly similar numbers of pickups, averaging around 100 per day. Students reporting somewhat unproductive had the highest number of pickups, typically over 300 per day. This is not surprising, as it suggests that students feeling somewhat unproductive were spending a lot of time on their phones.
