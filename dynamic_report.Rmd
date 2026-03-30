@@ -26,8 +26,7 @@ p {
 ```
 
 ```{r}
-# Load tidyverse quietly
-suppressPackageStartupMessages(library(tidyverse))
+library(tidyverse)
 
 # Loading the data in
 logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTyMuuJGdgPQKIn5Yu0SEmC_p6-Cb6GlP4981E_vJBrG4UJdoLjYsaYZUKI0T8vKZlLIgkgYB05Nd6p/pub?gid=495879699&single=true&output=csv")
